@@ -1,4 +1,5 @@
-﻿
+﻿@using tarea4._3.Models
+@model Formulario
 @{
     ViewBag.Title = "Index";
 }
@@ -6,3 +7,39 @@
 <h2>Index</h2>
 <title>HOLA</title>
 
+@using (Html.BeginForm("Index", "Formulario", FormMethod.Post))
+{
+    <br>
+    @Html.LabelFor(a => a.Cedula)
+    <br>
+    @Html.TextBoxFor(a => a.Cedula)
+    <br>
+    @Html.LabelFor(b => b.Nombre)
+    <br>
+    @Html.TextBoxFor(b => b.Nombre)
+    <br>
+    @Html.LabelFor(c => c.Apellido)
+    <br>
+    @Html.TextBoxFor(c => c.Apellido)
+    <br>
+    @Html.LabelFor(d => d.Edad)
+    <br>
+    @Html.TextBoxFor(d => d.Edad)
+    <br>
+    @Html.LabelFor(e => e.Telefono)
+    <br>
+    @Html.TextBoxFor(e => e.Telefono)
+    <br>
+    @Html.LabelFor(f => f.Correo)
+    <br>
+    @Html.TextBoxFor(f => f.Correo)
+    <br>
+    @Html.LabelFor(g => g.Genero)
+    <br>
+    @Html.TextBoxFor(g => g.Genero)
+    <br>
+    @Html.LabelFor(h => h.puesto)
+    <br>
+    @Html.TextBoxFor(h => h.puesto)
+
+}
