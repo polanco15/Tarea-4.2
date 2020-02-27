@@ -1,0 +1,22 @@
+﻿@using tarea4._3.Models
+@model Formulario
+
+@{
+    ViewBag.Title = "Resultado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Resultado</h2>
+
+
+<h3>@Model.Cedula </h3>
+<h3>@Model.Nombre</h3>
+<h3>@Model.Apellido</h3>
+<h3>@Model.Edad</h3>
+<h3>@Model.Telefono</h3>
+<h3>@Model.Correo</h3>
+<h3>@Model.Genero</h3>
+<h3>@Model.Puesto</h3>
+
+<img src="~/Fotos/@ViewBag.foto" width="300" height="300" />
+<iframe src='~/Curriculums/@ViewBag.curri' style='width:100%; height:700px;' frameborder='0'></iframe>"

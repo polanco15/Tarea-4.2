@@ -110,8 +110,8 @@ C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\bin\es\EntityFramewo
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\bin\es\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\bin\es\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\bin\es\Microsoft.AspNet.Identity.EntityFramework.resources.dll
-C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\obj\Debug\tarea43.csprojAssemblyReference.cache
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\obj\Debug\tarea43.csproj.CoreCompileInputs.cache
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\obj\Debug\tarea43.csproj.CopyComplete
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\obj\Debug\tarea4.3.dll
 C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\obj\Debug\tarea4.3.pdb
+C:\Users\araid\Documents\GitHub\Tarea-4.2\tarea4.3\tarea4.3\obj\Debug\tarea43.csprojAssemblyReference.cache

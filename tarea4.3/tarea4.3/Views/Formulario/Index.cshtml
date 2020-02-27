@@ -2,44 +2,86 @@
 @model Formulario
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
 <title>HOLA</title>
+<div class="formulario">
+    @using (Html.BeginForm("Resultado", "Formulario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div class="tabla">
+            <div class="col-left">
+                @Html.LabelFor(a => a.Cedula)
+                @Html.TextBoxFor(z => z.Cedula, new { @class = "form-control", placeholder = "Inserte su cédula" })
+                @Html.ValidationMessageFor(x => x.Cedula, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-mid">
+                @Html.LabelFor(a => a.Nombre)
+                @Html.TextBoxFor(z => z.Nombre, new { @class = "form-control", placeholder = "Inserte su nombre" })
+                @Html.ValidationMessageFor(x => x.Nombre, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
+                @Html.LabelFor(a => a.Apellido)
+                @Html.TextBoxFor(z => z.Apellido, new { @class = "form-control", placeholder = "Inserte su apellido" })
+                @Html.ValidationMessageFor(x => x.Apellido, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
+        <div class="tabla">
+            <div class="col-left">
+                @Html.LabelFor(a => a.Edad)
+                @Html.TextBoxFor(z => z.Edad, new { @class = "form-control", placeholder = "Inserte su edad" })
+                @Html.ValidationMessageFor(x => x.Edad, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
+                @Html.LabelFor(a => a.Telefono)
+                @Html.TextBoxFor(z => z.Telefono, new { @class = "form-control", placeholder = "Inserte su teléfono" })
+                @Html.ValidationMessageFor(x => x.Telefono, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
 
-@using (Html.BeginForm("Index", "Formulario", FormMethod.Post))
-{
-    <br>
-    @Html.LabelFor(a => a.Cedula)
-    <br>
-    @Html.TextBoxFor(a => a.Cedula)
-    <br>
-    @Html.LabelFor(b => b.Nombre)
-    <br>
-    @Html.TextBoxFor(b => b.Nombre)
-    <br>
-    @Html.LabelFor(c => c.Apellido)
-    <br>
-    @Html.TextBoxFor(c => c.Apellido)
-    <br>
-    @Html.LabelFor(d => d.Edad)
-    <br>
-    @Html.TextBoxFor(d => d.Edad)
-    <br>
-    @Html.LabelFor(e => e.Telefono)
-    <br>
-    @Html.TextBoxFor(e => e.Telefono)
-    <br>
-    @Html.LabelFor(f => f.Correo)
-    <br>
-    @Html.TextBoxFor(f => f.Correo)
-    <br>
-    @Html.LabelFor(g => g.Genero)
-    <br>
-    @Html.TextBoxFor(g => g.Genero)
-    <br>
-    @Html.LabelFor(h => h.puesto)
-    <br>
-    @Html.TextBoxFor(h => h.puesto)
+        @Html.LabelFor(a => a.Correo)
+        @Html.TextBoxFor(z => z.Correo, new { @class = "form-control", placeholder = "Inserte su correo electronico" })
+        @Html.ValidationMessageFor(x => x.Correo, null, new { @class = "text-danger" })
+        <br />
+        <div class="tabla">
+            <div class="col-left">
+                @Html.DropDownListFor(a => a.Genero,
+                              new SelectList(Enum.GetValues(typeof(Sexo))),
+                              "Seleccione su genero", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Genero, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
 
-}
+                @Html.DropDownListFor(a => a.Puesto,
+                                          new SelectList(Enum.GetValues(typeof(puesto))),
+                                          "Seleccione su puesto a aplicar", new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Puesto, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
+        <div class="tabla">
+            <div class="col-left">
+                @Html.LabelFor(a => a.foto)
+                @Html.TextBoxFor(z => z.foto, new { type = "file", accept = "image/png, .jpeg, .jpg", @class = "form-control", placeholder = "Foto 2x2" })
+                @Html.ValidationMessageFor(x => x.foto, null, new { @class = "text-danger" })
+                <br />
+            </div>
+            <div class="col-rght">
+                @Html.LabelFor(a => a.curriculum)
+                @Html.TextBoxFor(z => z.curriculum, new { type = "file", accept = "application/pdf", @class = "form-control", placeholder = "Curriculum" })
+                @Html.ValidationMessageFor(x => x.curriculum, null, new { @class = "text-danger" })
+                <br />
+            </div>
+        </div>
+
+        <input type="submit" value="ENVIAR" class="btn btn-success" />
+
+    }
+</div>
