@@ -1,0 +1,9 @@
+﻿
+
+
+
+#noticias:checked ~  #imagenes.musica, 
+#noticias:checked ~ #imagenes.pelicula
+{
+    display: none;
+}

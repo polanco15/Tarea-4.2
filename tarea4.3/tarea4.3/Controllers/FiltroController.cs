@@ -17,5 +17,9 @@ namespace tarea4._3.Controllers
         {
             return View();
         }
+        public ActionResult Acerca  ()
+        {
+            return View();
+        }
     }
 }
