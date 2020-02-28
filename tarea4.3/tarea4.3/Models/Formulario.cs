@@ -24,8 +24,8 @@ namespace tarea4._3.Models
         public string Correo { get; set; }
         public string Genero { get; set; }
         public string Puesto { get; set; }
-        public HttpPostedFileBase foto { get; set; }
-        public HttpPostedFileBase curriculum { get; set; }
+        public HttpPostedFileBase Foto { get; set; }
+        public HttpPostedFileBase Curriculum { get; set; }
     }
     public enum Sexo
     {
